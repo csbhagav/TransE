@@ -1,5 +1,5 @@
-from src.dataset import KnowledgeGraph
-from src.model import TransE
+from transe.dataset import KnowledgeGraph
+from transe.model import TransE
 
 import tensorflow as tf
 import argparse

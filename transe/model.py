@@ -4,7 +4,7 @@ import numpy as np
 import tensorflow as tf
 import multiprocessing as mp
 
-from src.dataset import KnowledgeGraph
+from transe.dataset import KnowledgeGraph
 
 
 class TransE:
