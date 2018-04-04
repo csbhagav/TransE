@@ -30,13 +30,13 @@ class KnowledgeGraph:
         relation_dict_file = 'relation2id.txt'
         print('-----Loading entity dict-----')
         entity_df = pd.read_table(os.path.join(self.data_dir, entity_dict_file), header=None)
-        self.entity_dict = dict(zip(entity_df[0], entity_df[1]))
+        self.entity_dict = dict(zip(entity_df[0].astype(str), entity_df[1]))
         self.n_entity = len(self.entity_dict)
         self.entities = list(self.entity_dict.values())
         print('#entity: {}'.format(self.n_entity))
         print('-----Loading relation dict-----')
         relation_df = pd.read_table(os.path.join(self.data_dir, relation_dict_file), header=None)
-        self.relation_dict = dict(zip(relation_df[0], relation_df[1]))
+        self.relation_dict = dict(zip(relation_df[0].astype(str), relation_df[1]))
         self.n_relation = len(self.relation_dict)
         print('#relation: {}'.format(self.n_relation))
 
